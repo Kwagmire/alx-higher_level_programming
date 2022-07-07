@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-
-    return {x: y for x, y in a_dictionary.items() if y != value}
+    for k, v in a_dictionary:
+        if v == value:
+            del a_dictionary[k]
+    return a_dictionary
