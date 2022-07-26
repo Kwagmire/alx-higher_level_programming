@@ -80,4 +80,4 @@ class Rectangle:
 
     def __del__(self):
         """Print a message for every rectangle deleted"""
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
