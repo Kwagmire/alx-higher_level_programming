@@ -22,7 +22,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/Set the width of the rectangle"""
+        """Get/Set the width of the Rectangle"""
         return self.__width
 
     @width.setter
@@ -35,7 +35,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/Set the width of the rectangle"""
+        """Get/Set the height of the Rectangle"""
         return self.__height
 
     @height.setter
@@ -47,16 +47,27 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Return the area of the Rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
+        """Return the perimeter of the Rectangle"""
         if any([i == 0 for i in [self.__width, self.__height]]):
             return 0
         return 2 * self.__width + 2 * self.__height
 
     def __str__(self):
+        """Return the printable representation of the Rectangle
+
+        Represents the rectangle with the # character.
+        """
         if any([i == 0 for i in [self.__width, self.__height]]):
-            print("")
+            return ""
         else:
+            to_print = ""
             for i in range(self.__height):
-                print("{}".format("#" * self.__width))
+                if i == self.__height - 1:
+                    to_print += "{}".format("#" * self.__width)
+                else:
+                    to_print += "{}\n".format("#" * self.__width)
+            return to_print
