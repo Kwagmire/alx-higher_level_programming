@@ -13,12 +13,12 @@ class Rectangle:
         """Initialize a new Rectangle.
 
         Args:
-            width (int, optional): The width of the new rectangle. Default to 0
-            height (int, optional): The height of the new rectangle. Default to 0
+            width (int): The width of the new rectangle. Default 0
+            height (int): The height of the new rectangle. Default 0
 
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
