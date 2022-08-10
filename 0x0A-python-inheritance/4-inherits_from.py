@@ -6,7 +6,7 @@ This module defines a function that confirms an object-class relationship.
 """
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """Check if the specified object is an instance of
     a class that inherited directly or indirectly from
     the specified class.
