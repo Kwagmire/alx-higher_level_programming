@@ -24,4 +24,4 @@ def pascal_triangle(n):
         thisLayer.append(1)
         triangle.append(thisLayer)
 
-    return triangles
+    return triangle
