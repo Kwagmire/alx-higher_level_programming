@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 5 of ALX Project(Python - Inheritance)
+"""Task 6 of ALX Project(Python - Inheritance)
 
 This module defines a class which has an instance method
 
