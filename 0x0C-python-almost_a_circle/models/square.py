@@ -42,7 +42,7 @@ class Square(Rectangle):
         """
         if args:
             if len(args) > 1:
-                new_args = []
+                new_args = [None for i in range(len(args) + 1)]
                 for index, argument in enumerate(args):
                     if index == 2:
                         new_args[2] = args[1]
