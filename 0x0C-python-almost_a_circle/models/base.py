@@ -79,8 +79,8 @@ class Base:
         """
         if dictionary:
             if cls.__name__ == "Rectangle":
-                newInstance = Rectangle(2, 2)
+                newInstance = cls(2, 2)
             else:
-                newInstance = Square(2)
+                newInstance = cls(2)
             new.update(**dictionary)
             return new
