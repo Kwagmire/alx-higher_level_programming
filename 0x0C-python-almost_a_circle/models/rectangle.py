@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 4 of ALX Project(Python - Almost a circle)
+"""Task 5 of ALX Project(Python - Almost a circle)
 
 This module defines a rectangle class.
 
@@ -91,3 +91,7 @@ class Rectangle(Base):
     def area(self):
         """Return the area of the Rectangle."""
         return self.__width * self.__height
+
+    def display(self):
+        """Print Rectangle with the character ``#``"""
+        (print("#" * self.__width) for i in range(self.__height))
