@@ -98,24 +98,38 @@ class Rectangle(Base):
         print("{}{}\n".format(" " * self.x, "#" * self.__width)
               * self.__height, end="")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the Rectangle.
 
         Args:
             args (list of int): New attribute values
+            kwargs (dict): New key/value pairs of attributes
 
         """
-        for index, value in enumerate(args):
-            if index == 0:
-                self.id = value
-            elif index == 1:
-                self.width = value
-            elif index == 2:
-                self.height = value
-            elif index == 3:
-                self.x = value
-            elif index == 4:
-                self.y = value
+        if args:
+            for index, value in enumerate(args):
+                if index == 0:
+                    self.id = value
+                elif index == 1:
+                    self.width = value
+                elif index == 2:
+                    self.height = value
+                elif index == 3:
+                    self.x = value
+                elif index == 4:
+                    self.y = value
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     def __str__(self):
         """Return the string representation of a Rectangle"""
