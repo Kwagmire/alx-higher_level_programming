@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 2 of ALX Project(Python - Almost a circle)
+"""Task 4 of ALX Project(Python - Almost a circle)
 
 This module defines a rectangle class.
 
@@ -87,3 +87,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Return the area of the Rectangle."""
+        return self.__width * self.__height
