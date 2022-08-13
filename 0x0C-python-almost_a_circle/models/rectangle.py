@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 8 of ALX Project(Python - Almost a circle)
+"""Task 13 of ALX Project(Python - Almost a circle)
 
 This module defines a rectangle class.
 
@@ -130,6 +130,10 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Return dictionary representation of the Square"""
+        return self.__dict__
 
     def __str__(self):
         """Return the string representation of a Rectangle"""
