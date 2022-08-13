@@ -4,6 +4,7 @@
 This module defines a base model class.
 
 """
+import json
 
 
 class Base:
@@ -27,3 +28,15 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return the JSON string representation of a list of dictionaries.
+
+        Args:
+            list_dictionaries (list of dicts): what to represent
+
+        """
+        if list_dictionaries:
+            return json.dumps(list_dictionaries)
+        return "[]"
