@@ -31,10 +31,10 @@ class Rectangle(Base):
 
         """
         super().__init__(id)
-        self.__width = width  #: width of Rectangle
-        self.__height = height  #: height of Rectangle
-        self.__x = x  #: x-coordinate of Rectangle
-        self.__y = y  #: y-coordinate of Rectangle
+        self.width = width  #: width of Rectangle
+        self.height = height  #: height of Rectangle
+        self.x = x  #: x-coordinate of Rectangle
+        self.y = y  #: y-coordinate of Rectangle
 
     @property
     def width(self):
