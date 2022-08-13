@@ -44,10 +44,10 @@ class Square(Rectangle):
             if len(args) > 1:
                 new_args = [None for i in range(len(args) + 1)]
                 for index, argument in enumerate(args):
-                    if index == 2:
-                        new_args[2] = args[1]
-                        new_args[3] = argument
-                    elif index > 2:
+                    if index == 1:
+                        new_args[1] = argument
+                        new_args[2] = argument
+                    elif index >= 2:
                         new_args[index + 1] = argument
                     else:
                         new_args[index] = argument
