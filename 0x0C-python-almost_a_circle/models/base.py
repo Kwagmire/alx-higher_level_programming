@@ -82,5 +82,5 @@ class Base:
                 newInstance = cls(2, 2)
             else:
                 newInstance = cls(2)
-            new.update(**dictionary)
-            return new
+            newInstance.update(**dictionary)
+            return newInstance
