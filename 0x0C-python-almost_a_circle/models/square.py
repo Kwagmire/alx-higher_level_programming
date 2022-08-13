@@ -51,7 +51,7 @@ class Square(Rectangle):
                         new_args[index + 1] = argument
                     else:
                         new_args[index] = argument
-                    super().update(*new_args, **kwargs)
+                super().update(*new_args, **kwargs)
             else:
                 super().update(*args, **kwargs)
         else:
