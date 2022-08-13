@@ -41,7 +41,7 @@ class Square(Rectangle):
 
         """
         if args:
-            if len(args > 1):
+            if len(args) > 1:
                 new_args = []
                 for index, argument in enumerate(args):
                     if index == 2:
@@ -51,10 +51,9 @@ class Square(Rectangle):
                         new_args[index + 1] = argument
                     else:
                         new_args[index] = argument
+                    super().update(*new_args, **kwargs)
             else:
-                new_args = args
-
-            super().update(*new_args, **kwargs)
+                super().update(*args, **kwargs)
         else:
             if "size" in kwargs:
                 new_kwargs = kwargs
